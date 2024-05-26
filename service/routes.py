@@ -70,7 +70,7 @@ def list_accounts():
     app.logger.info("Request to list Accounts")
     accounts = Account.all()
     account_list = [account.serialize() for account in accounts]
-    return make_response(jsonify(account_list), status.HTTP_200_OK)
+    return jsonify(account_list), status.HTTP_200_OK
 
 
 ######################################################################
